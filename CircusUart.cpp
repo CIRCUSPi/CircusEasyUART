@@ -1,3 +1,15 @@
+//***************************************************************************************
+// PROJECT: CircusUart.cpp
+// VERSION: V1.0 (Build:20220902)
+// AUTHOR : Zack Huang
+//***************************************************************************************
+// Version History:
+//
+// V1.0: First Test Release
+//
+//
+//***************************************************************************************
+
 #include "CircusUart.h"
 
 CircusUart::CircusUart(Stream &stream) : stream(stream), handler_idx(0)
