@@ -38,14 +38,14 @@ void setup()
 void setup()
 {
     // ...
-		// 當指定 Serial 收到 "Temp:23.4\r\n" 將會自動呼叫此事件，其中匿名方法傳入參數(*data)為"23.4"
-		// Output: Temperature: 23.4
+	// 當指定 Serial 收到 "Temp:23.4\r\n" 將會自動呼叫此事件，其中匿名方法傳入參數(*data)為"23.4"
+	// Output: Temperature: 23.4
     uart.on("Temp", ':', [](const char *data) {
         Serial.print("Temperature: ");
         Serial.println(data);
     });
-		// 當指定 Serial 收到 "Humi:56.7\r\n" 將會自動呼叫此事件，其中匿名方法傳入參數(*data)為"56.7"
-		// Output: Humidity: 56.7
+	// 當指定 Serial 收到 "Humi:56.7\r\n" 將會自動呼叫此事件，其中匿名方法傳入參數(*data)為"56.7"
+	// Output: Humidity: 56.7
     uart.on("Humi", ':', [](const char *data) {
         Serial.print("Humidity: ");
         Serial.println(data);
