@@ -1,4 +1,6 @@
 # **CircusEasyUART**
+
+CircusEasyUART 是一個在 Arduino 平台簡單易用的上下位機通訊機制，可以大大加快開發過程，並簡化程式碼。此外，它具有低延遲和高執行效率的優點，並且程式碼具有高可讀性和高相容性。如果您需要一個快速而可靠的通訊方式，CircusEasyUART 是一個值得考慮的選擇。
 ## 使用方式
 
 ---
@@ -78,6 +80,19 @@ void loop()
 {
     uart.loop();
 }
+```
+
+### 事件註冊數量 & 資料回應長度
+
+事件預設為 16 組，如需更多事件可從 CircusUart.h 修改 CIRCUS_HANDLER_MAX 定義。
+
+可儲存的回應資料長度預設為 32 Byte，如需接收更長回應資料可從 CircusUart.h 修改 CIRCUS_RX_BUFF 定義。
+
+注意: 需考量記憶體大小
+
+```cpp
+#define CIRCUS_HANDLER_MAX 16
+#define CIRCUS_RX_BUFF 32
 ```
 
 ### 許可證
