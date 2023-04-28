@@ -5,7 +5,7 @@
 
 ### Include CircusUart Library
 
-```arduino
+```C++
 #include <CircusUart.h>
 ```
 
@@ -13,7 +13,7 @@
 
 建立一或多個 CircusUart Object，並在建構時傳入要使用的序列埠 Object，後續將會從此序列埠收發資料。
 
-```arduino
+```C++
 CircusUart uart(Serial2);
 ```
 
@@ -23,7 +23,7 @@ CircusUart uart(Serial2);
 
 Ex: 使用 Serial2 作為輸入輸出序列埠，在 Setup() 方法中使用 Serial2.begin() 初始化序列埠。
 
-```arduino
+```C++
 void setup()
 {
     Serial2.begin(57600);
@@ -34,7 +34,7 @@ void setup()
 
 在 Setup() 方法中註冊事件，以便在接收到指定訊息時執行相應的操作。例如，在這個例子中，使用 uart.on() 函數註冊了名為 "Temp" 和 "Humi" 的事件，並以匿名方式分別指定了它們的處理函數（Callback Function），如下所示：
 
-```arduino
+```C++
 void setup()
 {
     // ...
@@ -58,7 +58,7 @@ void setup()
 
 可以使用 send() 函數發送數據。例如，在這個例子中，每隔一秒鐘就發送一個名為 "Motor1" 的事件，值為 "128"：
 
-```arduino
+```C++
 void loop()
 {
     static uint32_t timer = 0;
@@ -73,7 +73,7 @@ void loop()
 
 需要定時呼叫 loop 方法檢查是否有收到新資料，盡可能的即時呼叫此方法，如下所示：
 
-```arduino
+```C++
 void loop()
 {
     uart.loop();
