@@ -92,6 +92,6 @@ CircusEasyUART 是一個在 Arduino 平台簡單易用的上下位機通訊機�
 #define CIRCUS_RX_BUFF 32
 ```
 
-### 許可證
+## LICENSE
 
 CircusEasyUART 基於 MIT 許可證發布。請參閱 LICENSE 文件以獲取更多詳細信息。
